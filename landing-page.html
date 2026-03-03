@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Done-for-you automation: Turn anonymous website visitors into CRM leads automatically. Zapier + Clearbit + your CRM. $200-500 setup, 2-10h delivery.">
+  <meta name="keywords" content="visitor identification, anonymous traffic, lead generation, Zapier automation, Clearbit, B2B SaaS, CRM automation">
+  <title>Traffic De-Anonymizer — Turn Anonymous Visitors Into CRM Leads Automatically</title>
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Traffic De-Anonymizer — Identify Anonymous Website Visitors">
+  <meta property="og:description" content="90% of your traffic is anonymous. We build automation that identifies companies, scores leads, and pushes them to your CRM automatically.">
+  <meta property="og:url" content="https://traffic-deanonymizer.com">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Traffic De-Anonymizer">
+  <meta name="twitter:description" content="Done-for-you automation: anonymous visitors → CRM leads automatically">
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://traffic-deanonymizer.com">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Traffic De-Anonymizer",
+    "description": "Done-for-you automation service that identifies anonymous website visitors and pushes them to your CRM automatically",
+    "priceRange": "$200-$500",
+    "serviceType": "Marketing Automation Setup",
+    "provider": {
+      "@type": "Person",
+      "name": "Wassim Tallal",
+      "email": "tallalwassim131@gmail.com"
+    }
+  }
+  </script>
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #ffffff;
+    }
+    
+    a { color: #0052cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus { outline: 3px solid #0052cc; outline-offset: 2px; }
+    
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    
+    header {
+      background: #0a0a0a;
+      color: #ffffff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 1.5rem; font-weight: 700; }
+    header nav a { color: #ffffff; margin-left: 30px; font-weight: 500; }
+    header nav a:hover { color: #00cc66; text-decoration: none; }
+    
+    .hero {
+      background: linear-gradient(135deg, #00cc66 0%, #00994d 100%);
+      color: #ffffff;
+      padding: 100px 0;
+      text-align: center;
+    }
+    
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      opacity: 0.95;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: #ffa500;
+      color: #0a0a0a;
+      padding: 18px 40px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    
+    .cta-button:hover {
+      background: #ff8c00;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      text-decoration: none;
+    }
+    
+    section { padding: 80px 0; }
+    section h2 { font-size: 2.5rem; margin-bottom: 20px; text-align: center; color: #0a0a0a; }
+    section p { font-size: 1.1rem; text-align: center; max-width: 800px; margin: 0 auto 40px; color: #4a4a4a; }
+    
+    .problem { background: #f5f5f5; }
+    
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .problem-card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .problem-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .problem-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: #00cc66;
+    }
+    
+    .problem-card p {
+      text-align: left;
+      margin: 0;
+      color: #4a4a4a;
+    }
+    
+    .solution { background: #ffffff; }
+    
+    .solution-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+    
+    .step {
+      text-align: center;
+    }
+    
+    .step-number {
+      background: #00cc66;
+      color: #ffffff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 auto 20px;
+    }
+    
+    .step h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #0a0a0a;
+    }
+    
+    .step p {
+      font-size: 1rem;
+      color: #4a4a4a;
+    }
+    
+    .pricing { background: #f5f5f5; }
+    
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+    
+    .pricing-card {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .pricing-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    
+    .pricing-card.featured {
+      border: 3px solid #00cc66;
+      position: relative;
+    }
+    
+    .pricing-card.featured::before {
+      content: "Most Popular";
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffa500;
+      color: #0a0a0a;
+      padding: 5px 20px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    
+    .pricing-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #0a0a0a;
+    }
+    
+    .pricing-card .price {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #00cc66;
+      margin-bottom: 10px;
+    }
+    
+    .pricing-card .price-note {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    
+    .pricing-card ul {
+      list-style: none;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+    
+    .pricing-card li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+      color: #4a4a4a;
+    }
+    
+    .pricing-card li::before {
+      content: "✓ ";
+      color: #00cc66;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+    
+    .cta-section {
+      background: #00cc66;
+      color: #ffffff;
+      text-align: center;
+      padding: 80px 0;
+    }
+    
+    .cta-section h2 {
+      color: #ffffff;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .cta-section p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      opacity: 0.95;
+    }
+    
+    footer {
+      background: #0a0a0a;
+      color: #ffffff;
+      text-align: center;
+      padding: 40px 0;
+    }
+    
+    footer p {
+      margin: 10px 0;
+      color: #cccccc;
+    }
+    
+    footer a {
+      color: #ffa500;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h2 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      section h2 { font-size: 1.8rem; }
+      header nav a { margin-left: 15px; font-size: 0.9rem; }
+    }
+    
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.2rem; }
+      header nav { display: none; }
+      .hero h2 { font-size: 1.5rem; }
+      .cta-button { padding: 15px 30px; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Traffic De-Anonymizer</h1>
+      <nav>
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#cta">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>90% of Your Traffic Is Anonymous</h2>
+      <p>We build automation that identifies companies visiting your site and pushes them to your CRM automatically</p>
+      <a href="#cta" class="cta-button">Get Your Setup</a>
+    </div>
+  </section>
+
+  <section id="problem" class="problem">
+    <div class="container">
+      <h2>The Problem</h2>
+      <p>You're spending $5k-10k/month on ads and SEO. Traffic is growing. But 90% of visitors are anonymous numbers in Google Analytics.</p>
+      
+      <div class="problem-grid">
+        <div class="problem-card">
+          <h3>❓ Who Visited?</h3>
+          <p>Google Analytics shows sessions and pageviews. You don't know which companies are interested.</p>
+        </div>
+        
+        <div class="problem-card">
+          <h3>📉 No Follow-Up</h3>
+          <p>Sales team can't reach out. Marketing can't prove which channels drive pipeline.</p>
+        </div>
+        
+        <div class="problem-card">
+          <h3>🏃 Lost Leads</h3>
+          <p>Competitors who identify visitors faster close deals while you're still wondering who visited.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="solution" class="solution">
+    <div class="container">
+      <h2>The Solution: Done-For-You Automation</h2>
+      <p>We build Zapier workflows that identify companies (IP → Clearbit), enrich data (size, industry, tech stack), score leads (hot/warm/cold), and push to your CRM automatically.</p>
+      
+      <div class="solution-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Capture Visitors</h3>
+          <p>Google Analytics 4 tracks high-intent pages (pricing, demo, contact)</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Identify Companies</h3>
+          <p>Clearbit API converts IP addresses into company names, size, industry</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Score & Route</h3>
+          <p>Custom scoring (company size, pages visited, traffic source) + CRM push</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Alert Team</h3>
+          <p>Slack notifications for hot leads (score ≥8) + automatic follow-up</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2>Pricing</h2>
+      <p>Choose the package that fits your needs. All setups include documentation, testing, and support.</p>
+      
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <h3>Basic Setup</h3>
+          <div class="price">$200</div>
+          <p class="price-note">Perfect for startups</p>
+          <ul>
+            <li>Single workflow (GA4 → CRM)</li>
+            <li>1 CRM integration</li>
+            <li>Company identification</li>
+            <li>Google Sheets dashboard</li>
+            <li>7-day support</li>
+            <li>Delivery: 2-4 hours</li>
+          </ul>
+          <a href="#cta" class="cta-button">Get Started</a>
+        </div>
+        
+        <div class="pricing-card featured">
+          <h3>Pro Setup</h3>
+          <div class="price">$350</div>
+          <p class="price-note">Most popular</p>
+          <ul>
+            <li>3 workflows (GA4 + forms + chat)</li>
+            <li>2 CRM integrations</li>
+            <li>Lead scoring system</li>
+            <li>Slack alerts (hot leads)</li>
+            <li>30-day support</li>
+            <li>Delivery: 4-6 hours</li>
+          </ul>
+          <a href="#cta" class="cta-button">Get Started</a>
+        </div>
+        
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <div class="price">$500</div>
+          <p class="price-note">For scale-ups</p>
+          <ul>
+            <li>Unlimited workflows</li>
+            <li>3+ CRM integrations</li>
+            <li>Advanced scoring rules</li>
+            <li>Multi-touch attribution</li>
+            <li>60-day support + optimization</li>
+            <li>Delivery: 6-10 hours</li>
+          </ul>
+          <a href="#cta" class="cta-button">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta" class="cta-section">
+    <div class="container">
+      <h2>Stop Losing Leads to Anonymity</h2>
+      <p>Get your done-for-you automation delivered in 2-10 hours. No maintenance, no code required.</p>
+      <a href="mailto:tallalwassim131@gmail.com?subject=Traffic%20De-Anonymizer%20Setup%20Request&body=Hi,%0D%0A%0D%0AI'd%20like%20to%20request%20a%20Traffic%20De-Anonymizer%20setup.%0D%0A%0D%0ACompany:%20[Your%20Company]%0D%0AWebsite:%20[Your%20Website]%0D%0APackage:%20[Basic%20/%20Pro%20/%20Enterprise]%0D%0A%0D%0AThank%20you!" class="cta-button">Request Your Setup</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Traffic De-Anonymizer. All rights reserved.</p>
+      <p>Contact: <a href="mailto:tallalwassim131@gmail.com">tallalwassim131@gmail.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
