@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic De-Anonymizer | Turn Anonymous Visitors Into CRM Leads</title>
+    <meta name="description" content="Identify anonymous website visitors, enrich with company data, push to your CRM automatically. Done-for-you setup $200-500.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #f59e0b;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #f59e0b;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .problem {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .problem h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .problem-stat {
+            text-align: center;
+            font-size: 72px;
+            font-weight: 800;
+            color: #f59e0b;
+            margin-bottom: 20px;
+        }
+        
+        .problem-text {
+            text-align: center;
+            font-size: 24px;
+            color: #6b7280;
+            margin-bottom: 40px;
+        }
+        
+        .solution {
+            padding: 60px 0;
+            background: #f9fafb;
+        }
+        
+        .solution h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .workflow {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .workflow-step {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+            margin: 20px;
+        }
+        
+        .workflow-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .workflow-arrow {
+            font-size: 36px;
+            color: #9ca3af;
+            margin: 0 20px;
+        }
+        
+        .workflow-step h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .features {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .features h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: #f9fafb;
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #f59e0b;
+        }
+        
+        .pricing {
+            padding: 60px 0;
+            background: #f9fafb;
+        }
+        
+        .pricing h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: #f59e0b;
+        }
+        
+        .pricing-card.featured {
+            border-color: #f59e0b;
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+        }
+        
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-card .price {
+            font-size: 48px;
+            font-weight: 800;
+            color: #f59e0b;
+            margin: 20px 0;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 20px 0;
+        }
+        
+        .pricing-card li {
+            padding: 8px 0;
+            color: #6b7280;
+        }
+        
+        .pricing-card li:before {
+            content: "✓";
+            color: #10b981;
+            margin-right: 8px;
+        }
+        
+        .roi {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .roi h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .roi-calc {
+            background: #f9fafb;
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        
+        .roi-calc table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .roi-calc td {
+            padding: 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .roi-calc td:first-child {
+            font-weight: 600;
+        }
+        
+        .roi-calc td:last-child {
+            text-align: right;
+            color: #f59e0b;
+            font-weight: 700;
+        }
+        
+        .roi-total {
+            font-size: 24px;
+            color: #10b981;
+        }
+        
+        .faq {
+            padding: 60px 0;
+            background: #f9fafb;
+        }
+        
+        .faq h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .faq-item h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #f59e0b;
+        }
+        
+        footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .workflow { flex-direction: column; }
+            .workflow-arrow { transform: rotate(90deg); margin: 20px 0; }
+            .pricing-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Traffic De-Anonymizer</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Turn Anonymous Visitors Into CRM Leads</h1>
+            <p>Automatically identify companies visiting your site, enrich with data, and push to your CRM.</p>
+            <a href="#pricing" class="cta-button">Get Started →</a>
+        </div>
+    </section>
+
+    <section class="problem">
+        <div class="container">
+            <h2>The Problem</h2>
+            <div class="problem-stat">90%</div>
+            <p class="problem-text">of your website visitors are anonymous numbers.</p>
+            <p style="text-align: center; font-size: 18px; color: #6b7280; max-width: 600px; margin: 0 auto;">
+                You're spending money on ads, SEO, content... but most visitors leave without a trace. 
+                You have no idea which companies are interested, what they looked at, or when to follow up.
+            </p>
+        </div>
+    </section>
+
+    <section class="solution">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="workflow">
+                <div class="workflow-step">
+                    <div class="workflow-icon">🌐</div>
+                    <h3>Visitor Arrives</h3>
+                    <p>Someone visits your site</p>
+                </div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-step">
+                    <div class="workflow-icon">🔍</div>
+                    <h3>We Identify</h3>
+                    <p>IP → Company lookup</p>
+                </div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-step">
+                    <div class="workflow-icon">✨</div>
+                    <h3>We Enrich</h3>
+                    <p>Company data added</p>
+                </div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-step">
+                    <div class="workflow-icon">📊</div>
+                    <h3>Push to CRM</h3>
+                    <p>Lead in your system</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 40px; font-size: 18px; color: #6b7280;">
+                No code. No maintenance. Just leads appearing in your CRM.
+            </p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>What You Get</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🏢 Company Identification</h3>
+                    <p>Turn IP addresses into company names, industries, size, revenue, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📈 Lead Scoring</h3>
+                    <p>Auto-score based on company size, pages visited, and traffic source. Focus on hot leads.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔔 Real-Time Alerts</h3>
+                    <p>Slack notifications when high-intent companies visit your pricing or demo pages.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔗 CRM Integration</h3>
+                    <p>Works with HubSpot, Pipedrive, Salesforce, or Google Sheets. We handle the setup.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💡 Multi-Source Tracking</h3>
+                    <p>Website visits, form submissions, chatbot conversations—all enriched and logged.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🛠️ Done-For-You Setup</h3>
+                    <p>We build the workflow, you just connect your accounts. 2-4 hour delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price">$200</div>
+                    <ul>
+                        <li>Single workflow (GA4 → CRM)</li>
+                        <li>1 CRM integration</li>
+                        <li>Company identification + enrichment</li>
+                        <li>Google Sheets dashboard</li>
+                        <li>7-day support</li>
+                    </ul>
+                    <a href="mailto:contact@example.com?subject=Basic Setup Request" class="cta-button" style="margin-top: 20px; display: inline-block; font-size: 16px; padding: 12px 24px;">Get Started</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3>Pro</h3>
+                    <div class="price">$350</div>
+                    <ul>
+                        <li>3 workflows (GA4 + forms + chat)</li>
+                        <li>2 CRM integrations (e.g. HubSpot + Pipedrive)</li>
+                        <li>Lead scoring system</li>
+                        <li>Slack alerts (hot leads)</li>
+                        <li>30-day support + optimization</li>
+                    </ul>
+                    <a href="mailto:contact@example.com?subject=Pro Setup Request" class="cta-button" style="margin-top: 20px; display: inline-block; font-size: 16px; padding: 12px 24px;">Most Popular</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$500</div>
+                    <ul>
+                        <li>Custom workflows (unlimited sources)</li>
+                        <li>3+ CRM integrations</li>
+                        <li>Advanced lead scoring rules</li>
+                        <li>Dedicated Slack channel</li>
+                        <li>60-day support + monthly optimization</li>
+                    </ul>
+                    <a href="mailto:contact@example.com?subject=Enterprise Setup Request" class="cta-button" style="margin-top: 20px; display: inline-block; font-size: 16px; padding: 12px 24px;">Contact Us</a>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 40px; font-size: 16px; color: #6b7280;">
+                One-time setup fee. You pay monthly for tools (Zapier $20-50/mo, enrichment APIs ~$50/mo).
+            </p>
+        </div>
+    </section>
+
+    <section class="roi">
+        <div class="container">
+            <h2>ROI Example</h2>
+            <div class="roi-calc">
+                <table>
+                    <tr>
+                        <td>Your website traffic</td>
+                        <td>1,000 visitors/month</td>
+                    </tr>
+                    <tr>
+                        <td>Identifiable (companies)</td>
+                        <td>100 (10%)</td>
+                    </tr>
+                    <tr>
+                        <td>Hot leads (scored 7-10)</td>
+                        <td>20 (20%)</td>
+                    </tr>
+                    <tr>
+                        <td>Conversations started</td>
+                        <td>5 (25%)</td>
+                    </tr>
+                    <tr>
+                        <td>Customers closed</td>
+                        <td>1-2 (20-40%)</td>
+                    </tr>
+                    <tr>
+                        <td>Average deal value (B2B SaaS)</td>
+                        <td>$2,000-5,000/year</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Monthly value from 1-2 customers</strong></td>
+                        <td class="roi-total">$167-833/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Your cost (setup + tools)</strong></td>
+                        <td>$350 + $70/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ROI (first month)</strong></td>
+                        <td class="roi-total">Break-even to 2x</td>
+                    </tr>
+                </table>
+            </div>
+            <p style="text-align: center; margin-top: 20px; font-size: 16px; color: #6b7280;">
+                One customer = setup pays for itself. Two customers = 100% ROI in month 1.
+            </p>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>FAQ</h2>
+            
+            <div class="faq-item">
+                <h3>How does visitor identification work?</h3>
+                <p>We use IP-to-company databases (Clearbit, Hunter.io) to match visitor IPs to registered businesses. ~10% of website traffic is identifiable (B2B companies, not individuals).</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What CRMs do you support?</h3>
+                <p>HubSpot, Pipedrive, Salesforce, Zoho, Attio, Airtable, Google Sheets, or any tool with Zapier/webhook support.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do I need to pay for enrichment APIs?</h3>
+                <p>Yes. Clearbit (~$50/mo), Hunter.io (~$49/mo). You'll also need Zapier ($20-50/mo depending on volume). We help you set this up.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How long does setup take?</h3>
+                <p>Basic: 2-4 hours. Pro: 4-6 hours. Enterprise: Custom timeline. We deliver in 1-3 business days after you provide access.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What if I don't have a CRM?</h3>
+                <p>No problem. We'll set up a Google Sheets dashboard (free) as your CRM. You can upgrade to HubSpot/Pipedrive later.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can you add lead scoring?</h3>
+                <p>Yes (Pro/Enterprise packages). We score based on company size, pages visited, traffic source, and custom rules you define.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Traffic De-Anonymizer. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 14px; opacity: 0.7;">Email: contact@example.com</p>
+        </div>
+    </footer>
+</body>
+</html>
